@@ -15,5 +15,6 @@ with open(login_file, 'r') as f2:
     logins = [line.strip() for line in f2 if line.strip()]
 
 combined = [f"{proxy}:{login}" for proxy, login in zip(proxies, logins)]
+
 with open(output_file, 'w') as out:
     out.write('\n'.join(combined))
